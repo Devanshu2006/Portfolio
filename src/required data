@@ -1,0 +1,297 @@
+<!-- import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { 
+  Mail, ExternalLink, Code2, Database, BarChart3, Terminal, 
+  Moon, Sun, Briefcase, Layout, ShieldCheck, Cloud, Zap, Search
+} from 'lucide-react';
+import { SiPandas, SiNumpy, SiPython, SiFlask, SiReact, SiFirebase, SiGmail} from 'react-icons/si';
+import { MdApi, MdBuild, MdInsertChart, MdInsights, MdPayment } from 'react-icons/md';
+import { FaBriefcase, FaChartLine, FaCss3, FaEnvelope, FaExchangeAlt, FaFileExcel, FaGithub, FaHtml5, FaJs } from 'react-icons/fa';
+import myPhoto from './assets/my-photo.jpeg'; // Apni photo is location par add karein
+
+// --- DATA FROM RESUMES & PREVIOUS UPDATES ---
+const DATA = {
+  profile: {
+    name: "Devanshu Girare",
+    title: "Backend Developer | Data Analyst | Tester | Freelancer | Poet",
+    email: "devanshupawar20@gmail.com",
+    linkedin: "www.linkedin.com/in/devanshu-girare-2491a3373",
+    summary: "Backend Software Developer and Data Analyst skilled in building real-time applications and transforming datasets into insights. Experienced in Software Testing, API validation, and root-cause analysis."
+  },
+  skillsWithIcons: [
+      { name: "Python", icon: <SiPython size={20} />, color: "text-blue-500" },
+      { name: "Flask", icon: <SiFlask size={20} />, color: "text-orange-500" },
+      { name: "Pandas", icon: <SiPandas size={20} />, color: "text-green-400" },
+      { name: "NumPy", icon: <SiNumpy size={20} />, color: "text-purple-600" },
+      { name: "Power BI", icon: <MdInsertChart size={20} />, color: "text-yellow-400"},
+      { name: "SQL & Databases", icon: <Database size={20} />, color: "text-green-500" },
+      { name: "React.js", icon: <SiReact size={20} />, color: "text-cyan-400" },
+      { name: "Data Analysis", icon: <BarChart3 size={20} />, color: "text-purple-500" },
+      { name: "Software Testing", icon: <ShieldCheck size={20} />, color: "text-red-500" },
+      { name: "Cloud (AWS)", icon: <Cloud size={20} />, color: "text-yellow-600" },
+      { name: "WebSockets", icon: <Zap size={20} />, color: "text-yellow-400" },
+      { name: "Business Strategist", icon: <FaBriefcase size={20} />, color: "text-sky-900"},
+      { name: "Postman", icon: <FaEnvelope size={20} />, color: "text-pink-900"},
+      { name: "RESTApi", icon: <MdApi size={20} />, color: "text-violet-200"},
+      { name: "DevOps", icon: <MdBuild size={20} />, color: "text-indigo-400"},
+      { name: "GitHub", icon: <FaGithub size={20} />, color: "text-blue-50"},
+      { name: "PaymentTech", icon: <MdPayment size={20} />, color: "text-green-800"},
+      { name: "NoSqlDB", icon: <SiFirebase size={20} />, color: "text-orange-200"},
+      { name: "Excel", icon: <FaFileExcel size={20} />, color: "text-blue-500"},
+      { name: "EDA", icon: <MdInsights size={20} />, color: "text-red-500"},
+      { name: "KPI", icon: <FaChartLine size={20} />, color: "text-rose-50"},
+      { name: "ELT & ETL", icon: <FaExchangeAlt size={20} />, color: "text-purple-400"},
+      { name: "HTML", icon: <FaHtml5 size={20} />, color: "text-yellow-400"},
+      { name: "CSS", icon: <FaCss3 size={20} />, color: "text-blue-400"},
+      { name: "JavaScript", icon: <FaJs size={20} />, color: "text-purple-400"},
+    ],
+  experience: [
+    {
+      role: "Intern - Business & Data Analyst",
+      company: "DenQr (Startup)",
+      date: "Oct 2025 – Dec 2025",
+      points: [
+        "Collaborated with stakeholders to translate business requirements into technical solutions.",
+        "Analyzed large datasets using SQL and performed data cleaning to ensure 100% reporting accuracy.",
+        "Conducted end-to-end testing of interactive dashboards before client presentations.",
+        "Simplifying complex data into actionable recommendations for non-technical clients."
+      ]
+    }
+  ],
+  projects: [
+    {
+      id: "food-system",
+      title: "Online Food Ordering System",
+      type: "Full-Stack & Business Management",
+      date: "June 2025 – Nov 2025",
+      desc: "Real-time order management with secure payments and automated receipts.",
+      tech: ["Python", "Flask", "JavaScript", "React", "WebSockets", "Razorpay", "AWS"],
+      details: "It is basically an online food ordering system eithin restaurant. It provides medium for client and customer to track an order and make an order.I had also continued it as a startup for a couple of months but ended up closing it due to insufficient amount to run. Developed a real-time system with WebSocket synchronization. Performed rigorous API testing via Postman to ensure secure transaction verification and automated receipt generation."
+    },
+    {
+      id: "complaint-system",
+      title: "Complaint Management System",
+      type: "Full-Stack Development",
+      date: "Feb 2025 – Feb 2026",
+      desc: "Ai-Powered Complaint management system for the complaints. It assigns priority according to the concern automatically.",
+      tech: ["Python", "Flask", "JavaScript", "Firebase", "SQL", "Manual Testing"],
+      details: "Devloped an advanced prototype of Railway Complaint Register apps. We have integrated the Artificial Intilligence for quick priority assignment on the category of complaints. We have used HTML CSS JavaScript for the frontend part and Python Flask for the backend. we have used Firebase NoSql as database for storing all the data related to the web app or service."
+    },
+    {
+      id: "mobile-sales",
+      title: "Mobile Sales Analysis",
+      type: "Data Analysis & Visualization",
+      date: "Oct 2025 – Nov 2025",
+      desc: "Sales trend dashboard with rigorous data pre-processing and validation.",
+      tech: ["Pandas", "Power BI", "Excel", "Data Validation"],
+      details: "Improved data accuracy by handling missing values and removing duplicates. Built dynamic slicers to test purchasing patterns across different models and cities."
+    }
+  ]
+};
+
+const Section = ({ id, title, children }) => (
+  <section id={id} className={`py-20 px-6 bg-[#3D2C24]`}>
+    <div className="max-w-6xl mx-auto">
+      <h2 className="text-3xl font-bold mb-12 text-center text-white underline decoration-white underline-offset-8">
+        {title}
+      </h2>
+      {children}
+    </div>
+  </section>
+);
+
+export default function App() {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const liveDemo = () => {
+    window.location.href = "https://denqr.onrender.com";
+  };
+
+  const ViewSource = () => {
+    window.location.href = "https://github.com/devanshu2006/DenQr";
+  };
+  const ComplaintSource = () => {
+    window.location.href = "https://github.com/devanshu2006/Complaint-Management-Syatem";
+  };
+
+  return (
+    <div className="min-h-screen bg-[#3D2C24] font-sans selection:bg-blue-100 selection:text-blue-600 text-white">
+      
+      {/* Navbar */}
+      <nav className="fixed top-0 w-full z-40 bg-[#3D2C24]/70 backdrop-blur-md border-b border-white/20">
+        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+          <span className="font-black text-xl tracking-tighter uppercase">{DATA.profile.name}</span>
+          <div className="flex items-center gap-6">
+            <div className="hidden md:flex gap-6 text-sm font-medium">
+              <a href="#experience" className="hover:text-blue-200 transition">Experience</a>
+              <a href="#projects" className="hover:text-blue-200 transition">Projects</a>
+              <a href="#skills" className="hover:text-blue-200 transition">Skills</a>
+              <a href="#contact" className="hover:text-blue-200 transition">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      {/* Intro Section */}
+      <section className="pt-40 pb-24 px-6 bg-[#3D2C24]">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          {/* Left Side: Photo */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.8 }} 
+            animate={{ opacity: 1, scale: 1 }}
+            className="w-full md:w-1/3 flex justify-center md:justify-end"
+          >
+            <img 
+              src={myPhoto} 
+              alt={DATA.profile.name} 
+              className="w-72 h-72 md:w-80 md:h-80 object-cover rounded-full shadow-2xl border-8 border-white/10"
+            />
+          </motion.div>
+
+          {/* Right Side: Welcome & Intro */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }} 
+            animate={{ opacity: 1, x: 0 }}
+            className="w-full md:w-2/3 text-center md:text-left"
+          >
+            <h1 className="text-6xl md:text-7xl font-extrabold mb-6 tracking-tight">
+              Welcome to my Portfolio.
+            </h1>
+            <h2 className="text-3xl font-bold mb-6 flex items-center gap-3 justify-center md:justify-start">
+              <Terminal size={28} className="text-blue-500"/>
+              {DATA.profile.title}
+            </h2>
+            <p className="text-lg md:text-xl text-white/80 mb-10 leading-relaxed max-w-3xl mx-auto md:mx-0">
+              {DATA.profile.summary}
+            </p>
+            <div className="flex justify-center md:justify-start gap-4">
+              <a href="#experience" className="bg-blue-600 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition">Explore Work</a>
+              <a href="#contact" className="border border-white/20 text-white px-8 py-3 rounded-xl font-bold hover:bg-white/10 transition">Contact Me</a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Experience */}
+      <Section id="experience" title="Work Experience">
+        <div className="max-w-4xl mx-auto">
+          {DATA.experience.map((exp, idx) => (
+            <div key={idx} className="relative pl-8 border-l-2 border-white/20">
+              <div className="absolute w-4 h-4 bg-blue-600 rounded-full -left-[9px] top-1 shadow-[0_0_10px_rgba(37,99,235,0.5)]" />
+              <div className="mb-2 flex flex-wrap justify-between items-center gap-2">
+                <h3 className="text-2xl font-bold">{exp.role}</h3>
+                <span className="text-sm font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-md">{exp.date}</span>
+              </div>
+              <p className="text-lg font-semibold text-white/80 mb-4">{exp.company}</p>
+              <ul className="space-y-3">
+                {exp.points.map((p, i) => (
+                  <li key={i} className="text-white/70 flex gap-2">
+                    <span className="text-blue-600 text-lg leading-none">▹</span> {p}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Projects */}
+      <Section id="projects" title="Featured Work">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {DATA.projects.map(p => (
+            <motion.div 
+              key={p.id} whileHover={{ y: -10 }} onClick={() => setSelectedProject(p)}
+              className="bg-[#2D1F19] p-6 rounded-3xl border border-white/10 cursor-pointer shadow-sm hover:shadow-2xl transition-all"
+            >
+              <div className="flex justify-between mb-4">
+                <span className="text-[10px] font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-2 py-1 rounded">
+                  {p.type}
+                </span>
+                <Search size={18} className="text-white/40" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">{p.title}</h3>
+              <p className="text-white/60 text-sm mb-6 line-clamp-2">{p.desc}</p>
+              <div className="flex flex-wrap gap-2">
+                {p.tech.map(t => (
+                  <span key={t} className="text-[10px] font-bold px-2 py-1 bg-[#1F140F] rounded uppercase">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Skills Section */}
+      <Section id="skills" title="My Skills">
+        <div className="flex flex-wrap justify-center gap-4">
+          {DATA.skillsWithIcons.map((skill, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="flex items-center gap-3 px-5 py-3 bg-[#2D1F19] border border-white/10 rounded-2xl shadow-sm"
+            >
+              <span className={skill.color}>{skill.icon}</span>
+              <span className="font-bold text-sm text-white/90">{skill.name}</span>
+            </motion.div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Contact */}
+      <Section id="contact" title="Get In Touch">
+        <div className="text-center bg-[#2D1F19] p-12 rounded-3xl border border-white/10 max-w-3xl mx-auto">
+          <p className="text-white/70 mb-8 max-w-lg mx-auto">
+            Seeking opportunities to apply full-stack development and analytical testing to high-impact projects.
+          </p>
+          <div className="flex flex-col items-center gap-4">
+            <div className="flex gap-6 mt-4">
+              <a href={`https://${DATA.profile.linkedin}`} target="_blank" rel="noreferrer" className="p-3 bg-[#1F140F] rounded-full border border-white/10 text-white/70 hover:text-blue-600 transition shadow-sm">
+                <Briefcase size={24} />
+              </a>
+              <a href="https://github.com/devanshu2006" className="p-3 bg-[#1F140F] rounded-full border border-white/10 text-white/70 hover:text-blue-600 transition shadow-sm">
+                <FaGithub size={24} />
+              </a>
+              <a href="mailto:devanshupawar20@gmail.com" className="p-3 bg-[#1F140F] rounded-full border border-white/10 text-white/70 hover:text-blue-600 transition shadow-sm">
+                <SiGmail size={24} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Footer */}
+      <footer className="py-10 text-center text-white/50 text-xs border-t border-white/10">
+        © 2026 {DATA.profile.name} • CGPA: 7.72/10
+      </footer>
+
+      {/* Project Modal */}
+      <AnimatePresence>
+        {selectedProject && (
+          <motion.div 
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-slate-900/90 backdrop-blur-md"
+            onClick={() => setSelectedProject(null)}
+          >
+            <motion.div 
+              initial={{ scale: 0.9, y: 20 }} animate={{ scale: 1, y: 0 }}
+              className="bg-[#1F140F] max-w-2xl w-full p-8 rounded-3xl relative shadow-2xl text-white"
+              onClick={e => e.stopPropagation()}
+            >
+              <button onClick={() => setSelectedProject(null)} className="absolute top-6 right-6 text-white/40 hover:text-blue-600">✕</button>
+              <h2 className="text-3xl font-bold mb-2">{selectedProject.title}</h2>
+              <span className="text-blue-600 font-bold text-xs mb-6 block uppercase tracking-widest">{selectedProject.date}</span>
+              <p className="text-white/70 mb-8 leading-relaxed">
+                {selectedProject.details}
+              </p>
+              <div className="flex gap-4">
+                <button className="flex-1 bg-blue-600 text-white py-3 rounded-xl font-bold hover:bg-blue-700 transition" onClick={ViewSource}>View Source</button>
+                <button className="flex-1 border border-white/20 text-white py-3 rounded-xl font-bold hover:bg-white/10 transition" onClick={liveDemo}>Live Demo</button>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+} -->

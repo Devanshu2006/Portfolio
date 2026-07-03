@@ -75,7 +75,7 @@ const DATA = {
     {
       id: "complaint-system",
       title: "Complaint Management System",
-      type: "Full-Stack Development & Data Anakysis",
+      type: "Full-Stack Development & Data Analysis",
       date: "Feb 2025 – Feb 2026",
       live: "https://github.com/devanshu2006/Complaint-Management-Syatem",
       github: "https://github.com/Devanshu2006/power-bi-projects/blob/main/Complaint%20Management%20system.png",

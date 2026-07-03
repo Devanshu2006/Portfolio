@@ -48,14 +48,15 @@ const DATA = {
     ],
   experience: [
     {
-      role: "Intern - Business & Data Analyst",
-      company: "DenQr (Startup)",
-      date: "Oct 2025 – Dec 2025",
+      role: "Founder Startup",
+      company: "DenQr",
+      date: "Oct 2025 – Jan 2025",
       points: [
-        "Collaborated with stakeholders to translate business requirements into technical solutions.",
-        "Analyzed large datasets using SQL and performed data cleaning to ensure 100% reporting accuracy.",
-        "Conducted end-to-end testing of interactive dashboards before client presentations.",
-        "Simplifying complex data into actionable recommendations for non-technical clients."
+        <q>• Founded and managed a startup focused on providing digital food ordering solutions for hotels and restaurants.  
+          • Worked on identifying customer requirements and developing ordering system concepts.  
+          • Conducted market research and approached hotels and restaurants for business opportunities.  
+          • Managed client communication, product demonstrations, and business development activities.  
+          • Gained practical experience in entrepreneurship, sales, customer relationship management, and operations</q>
       ]
     }
   ],
@@ -65,11 +66,11 @@ const DATA = {
       title: "Online Food Ordering System",
       type: "Full-Stack & Business Management",
       date: "June 2025 – Nov 2025",
-      desc: "Real-time order management with secure payments and automated receipts.",
+      desc: "Real-time Fod order management with secure payments and automated receipts.",
       tech: ["Python", "Flask", "JavaScript", "React", "WebSockets", "Razorpay", "AWS"],
       live: "https://denqr.onrender.com",
       github: "https://github.com/devanshu2006/DenQr",
-      details: "It is basically an online food ordering system eithin restaurant. It provides medium for client and customer to track an order and make an order.I had also continued it as a startup for a couple of months but ended up closing it due to insufficient amount to run. Developed a real-time system with WebSocket synchronization. Performed rigorous API testing via Postman to ensure secure transaction verification and automated receipt generation."
+      details: "It is basically an online food ordering system within  the restaurant or hotels. It provides medium for client and customer to track an order and make an order.I had also continued it as a startup for a couple of months but ended up closing it due to insufficient amount to run. Developed a real-time system with WebSocket synchronization. Performed rigorous API testing via Postman to ensure secure transaction verification and automated receipt generation."
   },
     {
       id: "complaint-system",

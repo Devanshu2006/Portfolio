@@ -50,13 +50,13 @@ const DATA = {
     {
       role: "Founder Startup",
       company: "DenQr",
-      date: "Oct 2025 – Jan 2025",
+      date: "Oct 2025 – Jan 2026",
       points: [
         <q>Founded and managed a startup focused on providing digital food ordering solutions for hotels and restaurants.  
            Worked on identifying customer requirements and developing ordering system concepts.  
           Conducted market research and approached hotels and restaurants for business opportunities.  
           Managed client communication, product demonstrations, and business development activities.  
-          Gained practical experience in entrepreneurship, sales, customer relationship management, and operations</q>
+          Gained practical experience in entrepreneurship, sales, customer relationship management, and operations.</q>
       ]
     }
   ],
@@ -75,7 +75,7 @@ const DATA = {
     {
       id: "complaint-system",
       title: "Complaint Management System",
-      type: "Full-Stack Development",
+      type: "Full-Stack Development & Data Anakysis",
       date: "Feb 2025 – Feb 2026",
       live: "https://github.com/devanshu2006/Complaint-Management-Syatem",
       github: "https://github.com/Devanshu2006/power-bi-projects/blob/main/Complaint%20Management%20system.png",
@@ -115,7 +115,7 @@ export default function App() {
 
   const downloadResume = (type) => {
     const resumeMap = {
-      'Analyst': '/assets/Data_Analyst_w.pdf',
+      'Operation/Analyst': '/assets/Devanshu_G.pdf',
       'Tester': '/assets/Software_Tester.pdf',
       'Developer': '/assets/Devanshu_Girare_Resume.pdf',
     };
@@ -290,12 +290,12 @@ export default function App() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
                   <div className="bg-[#2D1F19] p-4 rounded-xl border border-white/5">
                     <h4 className="text-blue-400 font-bold text-xs uppercase mb-2">Education</h4>
-                    <p className="text-sm">B.Tech - CS Engineering</p>
-                    <p className="text-xs text-white/50">CGPA: 7.72/10 | RGPV Bhopal</p>
+                    <p className="text-sm">B.Tech - CSE</p>
+                    <p className="text-xs text-white/50">CGPA: 7.75/10 | RGPV Bhopal</p>
                   </div>
                   <div className="bg-[#2D1F19] p-4 rounded-xl border border-white/5">
                     <h4 className="text-green-400 font-bold text-xs uppercase mb-2">Location</h4>
-                    <p className="text-sm">Bhopal, MP, India</p>
+                    <p className="text-sm">Chhindwara, MP, India</p>
                   </div>
                 </div>
               </div>
@@ -322,7 +322,7 @@ export default function App() {
                   <div className="flex items-center gap-4">
                     <div className="p-3 bg-blue-500/10 rounded-xl text-blue-500"><BarChart3 size={24}/></div>
                     <div>
-                      <p className="font-bold">Data Analyst</p>
+                      <p className="font-bold">Operation/Analyst</p>
                       <p className="text-xs text-white/40 italic">SQL, Power BI, Python Focus</p>
                     </div>
                   </div>

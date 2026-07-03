@@ -52,11 +52,11 @@ const DATA = {
       company: "DenQr",
       date: "Oct 2025 – Jan 2025",
       points: [
-        <q>• Founded and managed a startup focused on providing digital food ordering solutions for hotels and restaurants.  
-          • Worked on identifying customer requirements and developing ordering system concepts.  
-          • Conducted market research and approached hotels and restaurants for business opportunities.  
-          • Managed client communication, product demonstrations, and business development activities.  
-          • Gained practical experience in entrepreneurship, sales, customer relationship management, and operations</q>
+        <q>Founded and managed a startup focused on providing digital food ordering solutions for hotels and restaurants.  
+           Worked on identifying customer requirements and developing ordering system concepts.  
+          Conducted market research and approached hotels and restaurants for business opportunities.  
+          Managed client communication, product demonstrations, and business development activities.  
+          Gained practical experience in entrepreneurship, sales, customer relationship management, and operations</q>
       ]
     }
   ],
@@ -66,7 +66,7 @@ const DATA = {
       title: "Online Food Ordering System",
       type: "Full-Stack & Business Management",
       date: "June 2025 – Nov 2025",
-      desc: "Real-time Fod order management with secure payments and automated receipts.",
+      desc: "Real-time Food order management with secure payments and automated receipts.",
       tech: ["Python", "Flask", "JavaScript", "React", "WebSockets", "Razorpay", "AWS"],
       live: "https://denqr.onrender.com",
       github: "https://github.com/devanshu2006/DenQr",

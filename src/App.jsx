@@ -115,7 +115,7 @@ export default function App() {
 
   const downloadResume = (type) => {
     const resumeMap = {
-      'Operation/Analyst': '/assets/Devanshu_G.pdf',
+      'Analyst': '/assets/Devanshu_G.pdf',
       'Tester': '/assets/Software_Tester.pdf',
       'Developer': '/assets/Devanshu_Girare_Resume.pdf',
     };

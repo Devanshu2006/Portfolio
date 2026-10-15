@@ -4,7 +4,7 @@ import {
   Mail, ExternalLink, Code2, Database, BarChart3, Terminal, 
   Moon, Sun, Briefcase, Layout, ShieldCheck, Cloud, Zap, Search
 } from 'lucide-react';
-import { SiPandas, SiNumpy, SiPython, SiFlask, SiReact, SiFirebase, SiGmail} from 'react-icons/si';
+import { SiPandas, SiNumpy, SiPython, SiFlask, SiReact, SiFirebase, SiGmail, SiPlaywright} from 'react-icons/si';
 import { MdApi, MdBuild, MdInsertChart, MdInsights, MdPayment } from 'react-icons/md';
 import { FaBriefcase, FaChartLine, FaCss3, FaEnvelope, FaExchangeAlt, FaFileExcel, FaGithub, FaHtml5, FaJs, FaWhatsapp } from 'react-icons/fa';
 import myPhoto from './assets/my-photo.jpeg'; 

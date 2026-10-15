@@ -12,15 +12,16 @@ import myPhoto from './assets/my-photo.jpeg';
 const DATA = {
   profile: {
     name: "Devanshu Girare",
-    title: "Backend Developer | Data Analyst | Tester | Freelancer | Poet",
+    title: "Software Test Engineer | QA Engineer | AI Engineer | Data Analyst",
     email: "devanshupawar20@gmail.com",
     contact: "7999178184",
     github: "github.com/devanshu2006",
     linkedin: "www.linkedin.com/in/devanshu-girare-2491a3373",
-    summary: "Backend Software Developer and Data Analyst skilled in building real-time applications and transforming datasets into insights. Experienced in Software Testing, API validation, and root-cause analysis."
+    summary: "Computer Science Engineering graduate with a strong interest in Software Quality Assurance, Manual Testing, and Test Automation. Familiar with functional, regression, and UI testing, test case design, defect identification, and database validation using SQL. Hands-on experience with Python, Playwright, pytest, Postman, and Jira, along with developing an AI-powered testing agent that automates website exploration, test case generation, test execution, and failure analysis. Also interested in AI development and integrating intelligent solutions to improve software testing efficiency, reliability, and test coverage. Eager to contribute to software quality and continuous improvement as a QA Engineer or Automation Tester."
   },
   skillsWithIcons: [
       { name: "Python", icon: <SiPython size={20} />, color: "text-blue-500" },
+      { name: "Playwright", icon: <SiPlaywright size={20} />, color: "text-blue-500" },
       { name: "Flask", icon: <SiFlask size={20} />, color: "text-orange-500" },
       { name: "Pandas", icon: <SiPandas size={20} />, color: "text-green-400" },
       { name: "NumPy", icon: <SiNumpy size={20} />, color: "text-purple-600" },
@@ -50,7 +51,7 @@ const DATA = {
     {
       role: "Founder Startup",
       company: "DenQr",
-      date: "Oct 2025 – Jan 2026",
+      date: "Oct 2025 – April 2026",
       points: [
         <q>Founded and managed a startup focused on providing digital food ordering solutions for hotels and restaurants.  
            Worked on identifying customer requirements and developing ordering system concepts.  
@@ -62,6 +63,25 @@ const DATA = {
   ],
   projects: [
     {
+      id: "ai-testing-agent",
+      title: "AI Autonomous Testing Agent",
+      type: "AI-Powered Software Test Automation",
+      date: "Oct 2026 – Present",
+      desc: "Built an AI-powered testing agent that explores websites, analyzes UI elements, generates automated test cases, and executes Playwright tests with intelligent failure analysis.",
+      tech: [
+        "Python",
+        "Playwright",
+        "pytest",
+        "Gemini AI",
+        "Page Object Model",
+        "Git"
+      ],
+      live: "https://github.com/Devanshu2006/AI-Agent/blob/main/main.py",
+      github: "https://github.com/Devanshu2006/AI-Agent",
+      details: "Developed an AI-driven test automation agent to streamline website testing. Implemented autonomous multi-page exploration to inspect URLs, page titles, links, forms, input fields, and buttons. Integrated Gemini AI to analyze observed website behavior and generate realistic test scenarios with executable Playwright and pytest scripts following the Page Object Model (POM). Implemented automated test execution, failure analysis, self-healing capabilities, and patch validation to improve test reliability. Designed the workflow to support both public pages and authenticated application pages while minimizing invented test scenarios."
+    },
+
+    {
       id: "food-system",
       title: "Online Food Ordering System",
       type: "Full-Stack & Business Management",
@@ -72,6 +92,27 @@ const DATA = {
       github: "https://github.com/devanshu2006/DenQr",
       details: "It is basically an online food ordering system within  the restaurant or hotels. It provides medium for client and customer to track an order and make an order.I had also continued it as a startup for a couple of months but ended up closing it due to insufficient amount to run. Developed a real-time system with WebSocket synchronization. Performed rigorous API testing via Postman to ensure secure transaction verification and automated receipt generation."
   },
+  
+    {
+      id: "data-art",
+      title: "ShopSphere",
+      type: "E-Commerce Data Management Platform",
+      date: "Aug 2025 – Sept 2025",
+      desc: "Developed and validated an e-commerce data management platform, focusing on data integrity, business logic, and reliable application workflows.",
+      tech: [
+        "Python",
+        "PostgreSQL",
+        "dbt",
+        "SQL",
+        "pytest",
+        "Playwright",
+        "Git"
+      ],
+      live: "https://github.com/Devanshu2006/Shopsphere",
+      github: "https://github.com/Devanshu2006/Shopsphere",
+      details: "Worked on an e-commerce data management platform involving customers, products, orders, and order items. Focused on software quality by validating application workflows, verifying database records using SQL, and automating test scenarios with Python, pytest, and Playwright. Designed and executed functional and regression test cases, validated data consistency across related entities, and identified potential defects to improve application reliability."
+  },
+
     {
       id: "complaint-system",
       title: "Complaint Management System",

@@ -4,9 +4,9 @@ import {
   Mail, ExternalLink, Code2, Database, BarChart3, Terminal, 
   Moon, Sun, Briefcase, Layout, ShieldCheck, Cloud, Zap, Search
 } from 'lucide-react';
-import { SiPandas, SiNumpy, SiPython, SiFlask, SiReact, SiFirebase, SiGmail, SiPlaywright} from 'react-icons/si';
+import { SiPandas, SiNumpy, SiPython, SiFlask, SiReact, SiFirebase, SiGmail} from 'react-icons/si';
 import { MdApi, MdBuild, MdInsertChart, MdInsights, MdPayment } from 'react-icons/md';
-import { FaBriefcase, FaChartLine, FaCss3, FaEnvelope, FaExchangeAlt, FaFileExcel, FaGithub, FaHtml5, FaJs, FaWhatsapp } from 'react-icons/fa';
+import { FaBriefcase, FaChartLine, FaCss3, FaEnvelope, FaExchangeAlt, FaFileExcel, FaGithub, FaHtml5, FaJs, FaTheaterMasks, FaWhatsapp } from 'react-icons/fa';
 import myPhoto from './assets/my-photo.jpeg'; 
 
 const DATA = {
@@ -21,7 +21,7 @@ const DATA = {
   },
   skillsWithIcons: [
       { name: "Python", icon: <SiPython size={20} />, color: "text-blue-500" },
-      { name: "Playwright", icon: <SiPlaywright size={20} />, color: "text-blue-500" },
+      { name: "Playwright", icon: <FaTheaterMasks size={20} />, color: "text-blue-500" },
       { name: "Flask", icon: <SiFlask size={20} />, color: "text-orange-500" },
       { name: "Pandas", icon: <SiPandas size={20} />, color: "text-green-400" },
       { name: "NumPy", icon: <SiNumpy size={20} />, color: "text-purple-600" },
